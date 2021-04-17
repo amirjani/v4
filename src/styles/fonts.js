@@ -24,16 +24,31 @@ import SFMonoRegularItalicWoff2 from '@fonts/SFMono/SFMono-RegularItalic.woff2';
 import SFMonoSemiboldItalicWoff from '@fonts/SFMono/SFMono-SemiboldItalic.woff';
 import SFMonoSemiboldItalicWoff2 from '@fonts/SFMono/SFMono-SemiboldItalic.woff2';
 
-const calibreNormalWeights = {
-  400: [CalibreRegularWoff, CalibreRegularWoff2],
-  500: [CalibreMediumWoff, CalibreMediumWoff2],
-  600: [CalibreSemiboldWoff, CalibreSemiboldWoff2],
+import RecursiveMonoRegularWoff from '@fonts/RecursiveMono/RecursiveMonoLnrSt-Light.woff2';
+import RecursiveMonoRegularWoff2 from '@fonts/RecursiveMono/RecursiveSansLnrSt-LightItalic.woff2';
+
+const recursiveMonoWeights = {
+  400: [RecursiveMonoRegularWoff, RecursiveMonoRegularWoff2],
+  500: [RecursiveMonoRegularWoff, RecursiveMonoRegularWoff2],
+  600: [RecursiveMonoRegularWoff, RecursiveMonoRegularWoff2],
+};
+
+const recursiveMonoItalicWeights = {
+  400: [RecursiveMonoRegularWoff, RecursiveMonoRegularWoff2],
+  500: [RecursiveMonoRegularWoff, RecursiveMonoRegularWoff2],
+  600: [RecursiveMonoRegularWoff, RecursiveMonoRegularWoff2],
 };
 
 const calibreItalicWeights = {
   400: [CalibreRegularItalicWoff, CalibreRegularItalicWoff2],
   500: [CalibreMediumItalicWoff, CalibreMediumItalicWoff2],
   600: [CalibreSemiboldItalicWoff, CalibreSemiboldItalicWoff2],
+};
+
+const calibreNormalWeights = {
+  400: [CalibreRegularWoff, CalibreRegularWoff2],
+  500: [CalibreMediumWoff, CalibreMediumWoff2],
+  600: [CalibreSemiboldWoff, CalibreSemiboldWoff2],
 };
 
 const sfMonoNormalWeights = {
@@ -50,6 +65,12 @@ const calibre = {
   name: 'Calibre',
   normal: calibreNormalWeights,
   italic: calibreItalicWeights,
+};
+
+const recursiveMono = {
+  name: 'RecursiveMono',
+  normal: recursiveMonoWeights,
+  italic: recursiveMonoItalicWeights,
 };
 
 const sfMono = {

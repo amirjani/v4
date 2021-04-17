@@ -7,7 +7,6 @@ import sr from '@utils/sr';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
-
   .inner {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -142,7 +141,7 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello, My name is Amirhossein and I developing products which helps everyone to have a better life,
+              Hello, My name is Amirhossein and I am developing products which helps everyone to have a better life,
               My story started back in 2016 when I decided to learn about mobile development, which led me to learn more about 
               web development and my enthusiasm about software architect thought me a lot about backend development.
             </p>
