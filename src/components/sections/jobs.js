@@ -164,27 +164,60 @@ const StyledTabPanel = styled.div`
 `;
 
 const Jobs = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      jobs: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/jobs/" } }
-        sort: { fields: [frontmatter___date], order: DESC }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              company
-              location
-              range
-              url
-            }
-            html
+  const data = {
+    "jobs": {
+      "edges": [
+        {
+          "node": {
+            "frontmatter": {
+              "title": "Fullstack Developer",
+              "company": "Sparlus(Supnex)",
+              "location": "Amesterdam - Netherlands (Tehran - Iran)",
+              "range": "Jun 2020 - Present",
+              "url": "https://www.sparlus.com/"
+            },
+            "html": "<ul>\n<li>R&D for building a SaaS product to fulfill the requirements</li>\n<li>Designing database (Relational and NoSql Databases)</li>\n<li>Multilingual products</li>\n</ul>"
+          }
+        },
+        {
+          "node": {
+            "frontmatter": {
+              "title": "Backend Developer",
+              "company": "FarazCRS",
+              "location": "Tehran Iran",
+              "range": "Dec 2018 - Jun 2020",
+              "url": "https://www.farazcrs.com/"
+            },
+            "html": "<ul>\n<li>B2B Central Reservation System (FarazCRS)</li>\n<li>B2C White-label projects(Apro, Tripdooni)</li>\n<li>multilingual websites(tripdooni, FarazMedical)</li>\n<li>Tourism Health</li>\n<li>working with micro service architecture</li>\n<li>ApiGateway Development</li>\n</ul>"
+          }
+        },
+        {
+          "node": {
+            "frontmatter": {
+              "title": "Backend Developer",
+              "company": "Noavaran",
+              "location": "Tehran Iran",
+              "range": "April 2018 - Dec 2018",
+              "url": "http://noavaran-sharif.ir/"
+            },
+            "html": "<ul>\n<li>Flower shop: designing and implementation</li>\n<li>Health service: designing and implementation</li>\n</ul>"
+          }
+        },
+        {
+          "node": {
+            "frontmatter": {
+              "title": "Fullstack Developer",
+              "company": "ZSP-CO",
+              "location": "Tehran Iran",
+              "range": "Aug 2017 - April 2018",
+              "url": "#"
+            },
+            "html": "<ul>\n<li>designing and implementation of freelancer website</li>\n</ul>"
           }
         }
-      }
+      ]
     }
-  `);
+  };
 
   const jobsData = data.jobs.edges;
 

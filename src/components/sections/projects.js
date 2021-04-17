@@ -162,29 +162,62 @@ const StyledProject = styled.li`
 `;
 
 const Projects = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      projects: allMarkdownRemark(
-        filter: {
-          fileAbsolutePath: { regex: "/projects/" }
-          frontmatter: { showInProjects: { ne: false } }
-        }
-        sort: { fields: [frontmatter___date], order: DESC }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              tech
-              github
-              external
-            }
-            html
+  const data = {
+    "projects": {
+      "edges": [
+        {
+          "node": {
+            "frontmatter": {
+              "title": "KOA boilerplate",
+              "tech": [
+                "typescript",
+                "MySQL",
+                "koaJS",
+                "elasticsearch",
+                'Inversify'
+              ],
+              "github": "https://github.com/amirjani/koa_boilerplate",
+              "external": "https://github.com/amirjani/koa_boilerplate"
+            },
+            "html": "KOA boilerplate for building expensive backend project"
+          }
+        },
+        {
+          "node": {
+            "frontmatter": {
+              "title": "FastApi boilerplate",
+              "tech": [
+                "python",
+                "MySQL",
+                "FastApi",
+                'jwt',
+                'swagger',
+                'alembic'
+              ],
+              "github": "https://github.com/amirjani/jalali-calendar",
+              "external": "https://github.com/amirjani/fastapi_boilerplate"
+            },
+            "html": "FastApi boilerplate for building expensive backend project"
+          }
+        },
+        {
+          "node": {
+            "frontmatter": {
+              "title": "jalali-calendar",
+              "tech": [
+                "PHP",
+                "MySQL",
+                "Laravel",
+              ],
+              "github": "https://github.com/amirjani/jalali-calendar",
+              "external": "https://github.com/amirjani/jalali-calendar"
+            },
+            "html": "improved morilog calendar and you can get day , month , year and ... to persian and persian numbers fixed"
           }
         }
-      }
+      ]
     }
-  `);
+  };
 
   const [showMore, setShowMore] = useState(false);
   const revealTitle = useRef(null);
@@ -206,9 +239,9 @@ const Projects = () => {
     <StyledProjectsSection>
       <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
 
-      <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
+      {/* <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
         view the archive
-      </Link>
+      </Link> */}
 
       <ul className="projects-grid">
         <TransitionGroup component={null}>
@@ -276,9 +309,9 @@ const Projects = () => {
         </TransitionGroup>
       </ul>
 
-      <button className="more-button" onClick={() => setShowMore(!showMore)}>
+      {/* <button className="more-button" onClick={() => setShowMore(!showMore)}>
         Show {showMore ? 'Less' : 'More'}
-      </button>
+      </button> */}
     </StyledProjectsSection>
   );
 };
