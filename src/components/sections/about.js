@@ -116,7 +116,7 @@ const StyledPic = styled.div`
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      avatar: file(sourceInstanceName: { eq: "images" }, relativePath: { eq: "me.jpg" }) {
+      avatar: file(sourceInstanceName: { eq: "images" }, relativePath: { eq: "me.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 500, traceSVG: { color: "#64ffda" }) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -132,7 +132,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'React', 'Eleventy', 'Vue', 'Node.js', 'WordPress'];
+  const skills = ['Backend Development', 'Relational Database', 'Non-Relational Database', 'TypeScript', 'NestJs', 'PHP', 'Laravel', 'Node.js', 'Git', 'Redis' ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -142,21 +142,19 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Hello, My name is Amirhossein and I developing products which helps everyone to have a better life,
+              My story started back in 2016 when I decided to learn about mobile development, which led me to learn more about 
+              web development and my enthusiasm about software architect thought me a lot about backend development.
             </p>
-
             <p>
-              Fast-forward to today, and I've had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
+              Fast-forward to today, I've had the chance of working with several amazing teams, such as 
+              {' '} <a>a health organization</a>,
+              {' '} <a>a tourism agency</a>,
+              {' '} <a>a startup </a>,
+              {' '} <a>a technology company</a>.
+            </p>
+            <p>
+              My main focus these days is software architect and building products web environment
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
