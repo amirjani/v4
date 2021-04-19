@@ -9,21 +9,17 @@ import { useStaticQuery, graphql } from 'gatsby';
 const Head = ({ title, description, image }) => {
   const { pathname } = useLocation();
 
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            defaultTitle: title
-            defaultDescription: description
-            siteUrl
-            defaultImage: image
-            twitterUsername
-          }
-        }
+  const { site } = {
+    "site": {
+      "siteMetadata": {
+        "defaultTitle": "Amir Jani",
+        "defaultDescription": "Amir Jani is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.",
+        "siteUrl": "https://amirjani.me",
+        "defaultImage": "#",
+        "twitterUsername": "@amir__jani"
       }
-    `,
-  );
+    }
+  }
 
   const {
     defaultTitle,
@@ -59,7 +55,7 @@ const Head = ({ title, description, image }) => {
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
 
-      <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" />
+      {/* <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" /> */}
     </Helmet>
   );
 };
